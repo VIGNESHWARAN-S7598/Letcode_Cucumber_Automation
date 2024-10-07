@@ -1,5 +1,5 @@
+@FormIterate @Execute
 Feature: Checking the Forms Webpage
-  @FormIterate
   Scenario Outline: Entering the details in the given form
     Given User is in the webpage
     When User enters the "<FirstName>"
@@ -18,7 +18,7 @@ Feature: Checking the Forms Webpage
 #---------|      Make sure to Delete the Examples Section After executing the Script      |--------------------------------------------------------------------------
 #---------|_______________________________________________________________________________|---------------------------------------------------------------------------
     Examples:
-      | FirstName | LastName | Email | Phone_No | Address Line_1 | Address Line_2 | State | Postal_Code | DOB | Gender |
-
-
+      | FirstName    | LastName   | Email                       | Phone_No         | Address Line_1 | Address Line_2 | State | Postal_Code | DOB       | Gender |
+      | VIGNESHWARAN |sOMASUNDARAM|   SVIGNESHxxxx@GMAIL.COM    |  WEST aVE        |    CITY        |     MDU        |   tn  |     9736    |  070598   |   mALE |
+      | gANESH       | Sivakumar  |   ganeshXXX@gmail.com       |                  |                |                |       |             |           |        |
 

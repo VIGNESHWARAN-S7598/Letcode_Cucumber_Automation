@@ -240,4 +240,15 @@ public class Forms {
         firstNameField.sendKeys(firstName);
 
     }
+    public void enteringTheLAstName(String lastName) throws IOException {
+        PageFactory.initElements(driver(),this);
+        lastNameField.sendKeys(lastName);
+
+    }
+    public void enteringEmail(String email) throws IOException {
+        PageFactory.initElements(driver(),this);
+        emailField.clear();
+        emailField.sendKeys(email);
+
+    }
 }

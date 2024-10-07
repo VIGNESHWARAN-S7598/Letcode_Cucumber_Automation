@@ -22,11 +22,13 @@ public class FormIterateStepDef extends Forms {
     }
 
     @And("enters the {string}")
-    public void entersThe(String arg0) {
+    public void entersThe(String lastName) throws IOException {
+        enteringTheLAstName(lastName);
     }
 
     @And("enters an {string}")
-    public void entersAn(String arg0) {
+    public void entersAn(String eMail) throws IOException {
+        enteringEmail(eMail);
     }
 
     @And("Selects the country Code as {string} in the country code field")

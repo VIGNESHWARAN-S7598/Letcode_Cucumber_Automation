@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "C:/Users/svign/IdeaProjects/Cucumber_Automation/src/main/java/Features",
         glue = {"StepDefinitions","Hooks"},
-        tags = " @Execute",
+        tags = "@Execute",
         plugin ={"html:report/WebReport.html"}
 
 

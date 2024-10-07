@@ -1,5 +1,5 @@
 Feature: Checking the Forms Webpage
-  @FormEdit @Execute
+  @FormEdit
   Scenario: Entering the details in the given form
     Given User is in the web page
     When User enters the first name firstname

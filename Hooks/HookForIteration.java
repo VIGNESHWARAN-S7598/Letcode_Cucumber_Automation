@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HookForIteration
+/*public class HookForIteration
 {
     @Before("@FormIterate")
     public static void writeFormFeature() throws IOException {
@@ -26,5 +26,5 @@ public class HookForIteration
         bw.close();
     }
 
-}
+}*/
 
