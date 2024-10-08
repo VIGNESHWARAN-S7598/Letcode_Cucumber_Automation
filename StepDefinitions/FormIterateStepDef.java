@@ -8,8 +8,6 @@ import io.cucumber.java.en.When;
 
 import java.io.IOException;
 
-import static Utilities.DriverUtilities.*;
-
 public class FormIterateStepDef extends Forms {
     @Given("User is in the webpage")
     public void userIsInTheWebpage() throws IOException {
@@ -32,30 +30,37 @@ public class FormIterateStepDef extends Forms {
     }
 
     @And("Selects the country Code as {string} in the country code field")
-    public void selectsTheCountryCodeAsInTheCountryCodeField(String arg0) {
+    public void selectsTheCountryCodeAsInTheCountryCodeField(String countryCode) throws IOException {
+        selectCountryCode(countryCode);
     }
 
     @And("Enters {string}")
-    public void enters(String arg0) {
+    public void enters(String phoneNo) throws IOException {
+        enterPhoneNo(phoneNo);
     }
 
-    @And("Enters Address {string}{string}{string}{string}")
-    public void entersAddress(String arg0, String arg1, String arg2, String arg3) {
+    @And("Enters Address {string}{string}{string}{string}{string}")
+    public void entersAddress(String add1,String add2,String state,String pcode,String country) throws IOException {
+        enterAddress(add1,add2,state,pcode,country);
     }
 
-    @And("Selects the Country as {string} in the country field")
-    public void selectsTheCountryAsInTheCountryField(String arg0) {
+    @And("Enters dob as {string}")
+    public void entersDobAs(String DOB) throws IOException {
+        enterDOB(DOB);
     }
 
     @And("Selected the {string}")
-    public void selectedThe(String arg0) {
+    public void selectedThe(String gender) throws IOException, InterruptedException {
+        enterGender(gender);
     }
 
     @And("Agreed the terms and Conditions by clicking the checkBox")
-    public void agreedTheTermsAndConditionsByClickingTheCheckBox() {
+    public void agreedTheTermsAndConditionsByClickingTheCheckBox() throws IOException {
+        checkTermsAndConditions();
     }
 
     @Then("Click on the submit button at the end of the webpage")
-    public void clickOnTheSubmitButtonAtTheEndOfTheWebpage() {
+    public void clickOnTheSubmitButtonAtTheEndOfTheWebpage() throws IOException {
+        submitForm();
     }
 }
