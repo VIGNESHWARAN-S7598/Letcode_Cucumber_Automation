@@ -1,4 +1,4 @@
-@Buttons 
+@Buttons @Execute
 Feature: testing the button WebElements
 
   @Homebutton
