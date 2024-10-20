@@ -17,7 +17,7 @@ public class DriverUtilities {
         Properties p=new Properties();
         p.load(fi);
         if (driver == null){
-            System.setProperty("webdriver.chrome.driver",p.getProperty("chromeDriver_Path"));
+            System.setProperty("webdriver.chrome.driver","C:\\Users\\svign\\IdeaProjects\\Cucumber_Automation\\src\\main\\resources\\Drivers\\chromedriver.exe");   //p.getProperty("chromeDriver_Path")
             driver=new ChromeDriver();
             }
 
@@ -25,10 +25,7 @@ public class DriverUtilities {
        return driver;
 
     }
-    public static String getPageName() throws IOException{
-       String pageName=driver().getTitle();
-       return pageName;
-    }
+
     public static void openWebPage(String page) throws IOException {
        if(page.equalsIgnoreCase("HomePage")){
            driver().get("https://letcode.in/test");
@@ -42,6 +39,9 @@ public class DriverUtilities {
         if(page.equalsIgnoreCase("Inputpage")){
             driver().get("https://letcode.in/edit");
         }
+    }
+    public static void maximizeWebpage() throws IOException {
+       driver().manage().window().maximize();
     }
 
 

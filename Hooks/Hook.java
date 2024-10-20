@@ -1,5 +1,6 @@
 package Hooks;
 
+import Utilities.DriverUtilities;
 import Utilities.ExcelUtilities;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -14,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 
-public class Hook {
+public class Hook extends DriverUtilities {
      List<Row> row;
     @Before("@FormEdit")
 
@@ -27,8 +28,9 @@ public class Hook {
 
     }
 
-    @After
-    public void print() {
+    @After("@readOnlyField")
+    public void print() throws IOException {
         System.out.println("Execution is completed");
+        driver().close();
     }
 }
